@@ -581,12 +581,7 @@ export default function Home() {
               {/* Headline */}
               <div style={{ overflow: 'hidden', lineHeight: 1 }}>
                 <h1 className="hw" style={{ fontSize: 'clamp(3.8rem,6.5vw,7.5rem)', fontWeight: 900, letterSpacing: '-0.045em', color: T.white, textTransform: 'uppercase', lineHeight: 0.88, marginBottom: '3px' }}>
-                  STRA-
-                </h1>
-              </div>
-              <div style={{ overflow: 'hidden', lineHeight: 1 }}>
-                <h1 className="hw" style={{ fontSize: 'clamp(3.8rem,6.5vw,7.5rem)', fontWeight: 900, letterSpacing: '-0.045em', color: T.white, textTransform: 'uppercase', lineHeight: 0.88, marginBottom: '3px' }}>
-                  TEGIC
+                  STRATEGIC
                 </h1>
               </div>
               <div style={{ overflow: 'hidden', lineHeight: 1, marginBottom: '28px' }}>

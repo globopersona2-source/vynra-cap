@@ -351,7 +351,7 @@ export default function VynraCapitalHomePage() {
               <Button
                 className="gold-btn text-white text-sm font-semibold px-5 rounded-xl shadow-none hover:shadow-md hover:shadow-amber-200 transition-all duration-300"
               >
-                Request Capital
+                Request a quote
                 <ArrowRight size={14} className="ml-1.5" />
               </Button>
             </div>
@@ -436,7 +436,7 @@ export default function VynraCapitalHomePage() {
                   size="lg"
                   className="gold-btn text-white font-semibold rounded-xl px-8 h-13 text-base hover:shadow-lg hover:shadow-amber-600/25 transition-all duration-300 group"
                 >
-                  Request Capital
+                  Request a quote
                   <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                 </Button>
                 <Button

@@ -421,62 +421,51 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20 items-start">
 
-            {/* Left — Photo + Quick Facts */}
-            <div className="lg:sticky lg:top-28">
-              {/* Photo */}
-              <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden bg-[#111727] mb-7">
-                <div className="absolute inset-0 dot-pattern opacity-[0.05]" />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#0d1421] via-[#111727] to-[#1a2840]" />
-                {/* Replace with: <Image src="/jason-smith.jpg" alt="Jason Smith" fill className="object-cover" /> */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                  <div className="w-28 h-28 rounded-full bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-500/20 flex items-center justify-center">
-                    <span className="text-amber-400 text-5xl font-bold font-display">JS</span>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-white font-bold text-2xl font-display mt-2">Jason Smith</p>
-                    <p className="text-amber-400 text-sm mt-1 font-medium">Founder, Vynra Capital</p>
-                    <div className="flex items-center justify-center gap-1 mt-3">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={12} className="text-amber-500 fill-amber-500" />
-                      ))}
-                    </div>
-                    <p className="text-white/30 text-xs mt-1">20+ Years in Lending</p>
-                  </div>
-                </div>
-                {/* Bottom accent */}
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#111727]/80 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent" />
-              </div>
+{/* Left — Photo + Quick Facts */}
+<div className="lg:sticky lg:top-28">
+  {/* Photo */}
+  <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden mb-7">
+    <Image
+      src="/jason-smith.png"
+      alt="Jason Smith — Founder, Vynra Capital"
+      fill
+      className="object-cover object-top"
+      priority
+    />
+    {/* Subtle overlay at bottom for text legibility if needed */}
+    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#111727]/60 to-transparent" />
+    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent" />
+  </div>
 
-              {/* Quick facts */}
-              <Card className="border border-slate-100 shadow-none rounded-2xl overflow-hidden">
-                <div className="bg-[#111727] px-7 py-4">
-                  <p className="text-[10px] text-amber-400/70 uppercase tracking-widest font-semibold">Quick Facts</p>
-                </div>
-                <CardContent className="p-0">
-                  {[
-                    { label: "Career Start", value: "2004, New York" },
-                    { label: "First Role", value: "Loan Officer #1 — Triumph Funding" },
-                    { label: "Team Built", value: "100+ Loan Officers at Triumph" },
-                    { label: "Bank Ownership", value: "Co-Owner, Flagstar Bank Branch" },
-                    { label: "Specialty", value: "Commercial & Structured Deals" },
-                    { label: "Founded Vynra", value: "After 20+ Years in Lending" },
-                  ].map(({ label, value }, i, arr) => (
-                    <div
-                      key={label}
-                      className={cn(
-                        "flex justify-between items-center px-7 py-4 gap-6",
-                        i < arr.length - 1 ? "border-b border-slate-50" : "",
-                        i % 2 === 0 ? "bg-white" : "bg-slate-50/50"
-                      )}
-                    >
-                      <span className="text-slate-400 text-sm flex-shrink-0">{label}</span>
-                      <span className="text-[#111727] font-semibold text-sm text-right">{value}</span>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
-            </div>
+  {/* Quick facts */}
+  <Card className="border border-slate-100 shadow-none rounded-2xl overflow-hidden">
+    <div className="bg-[#111727] px-7 py-4">
+      <p className="text-[10px] text-amber-400/70 uppercase tracking-widest font-semibold">Quick Facts</p>
+    </div>
+    <CardContent className="p-0">
+      {[
+        { label: "Career Start",    value: "2004, New York" },
+        { label: "First Role",      value: "Loan Officer #1 — Triumph Funding" },
+        { label: "Team Built",      value: "100+ Loan Officers at Triumph" },
+        { label: "Bank Ownership",  value: "Co-Owner, Flagstar Bank Branch" },
+        { label: "Specialty",       value: "Commercial & Structured Deals" },
+        { label: "Founded Vynra",   value: "After 20+ Years in Lending" },
+      ].map(({ label, value }, i, arr) => (
+        <div
+          key={label}
+          className={cn(
+            "flex justify-between items-center px-7 py-4 gap-6",
+            i < arr.length - 1 ? "border-b border-slate-50" : "",
+            i % 2 === 0 ? "bg-white" : "bg-slate-50/50"
+          )}
+        >
+          <span className="text-slate-400 text-sm flex-shrink-0">{label}</span>
+          <span className="text-[#111727] font-semibold text-sm text-right">{value}</span>
+        </div>
+      ))}
+    </CardContent>
+  </Card>
+</div>
 
             {/* Right — Full Bio */}
             <div>

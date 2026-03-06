@@ -19,6 +19,9 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
+  // ✅ Fixes the metadataBase OG warning
+  metadataBase: new URL("https://vynracapital.com"),
+
   title: "Vynra Capital — Structured Funding for Sustainable Growth",
   description:
     "Over 20 years of experience delivering commercial, hard money, and alternative financing solutions through trusted banking, institutional, and private capital relationships.",
@@ -68,10 +71,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  // ✅ Only reference favicon.ico — remove shortcut and apple since those files don't exist
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
   },
 };
 
